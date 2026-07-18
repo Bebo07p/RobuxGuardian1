@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+<div class="page-header">
+
+
+    <h1>
+
+        👥 Usuarios Registrados
+
+    </h1>
+
+
+    <p>
+
+        Usuarios detectados por RobuxGuardian.
+
+    </p>
+
+
+</div>
+
+
+
+
+
+
+<div class="table-container">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+ID
+
+</th>
+
+
+<th>
+
+Discord ID
+
+</th>
+
+
+<th>
+
+Usuario
+
+</th>
+
+
+<th>
+
+Nickname
+
+</th>
+
+
+<th>
+
+Cuenta creada
+
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+<tbody>
+
+
+
+
+{% for usuario in usuarios %}
+
+
+
+<tr>
+
+
+
+<td>
+
+{{ usuario[0] }}
+
+</td>
+
+
+
+
+<td>
+
+{{ usuario[1] }}
+
+</td>
+
+
+
+
+<td>
+
+{{ usuario[2] }}
+
+</td>
+
+
+
+
+<td>
+
+{{ usuario[3] }}
+
+</td>
+
+
+
+
+<td>
+
+{{ usuario[4] }}
+
+</td>
+
+
+
+
+</tr>
+
+
+
+{% else %}
+
+
+
+<tr>
+
+
+<td colspan="5">
+
+No hay usuarios registrados.
+
+</td>
+
+
+</tr>
+
+
+
+{% endfor %}
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

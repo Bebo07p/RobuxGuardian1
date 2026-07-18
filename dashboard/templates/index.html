@@ -1,0 +1,365 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+<div class="dashboard-header">
+
+
+    <h1>
+
+        🛡️ Panel Principal
+
+    </h1>
+
+
+    <p>
+
+        Bienvenido al centro de control de RobuxGuardian Enterprise.
+
+    </p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="cards">
+
+
+
+    <div class="card fade-in">
+
+
+        <div class="icon">
+
+            🎟️
+
+        </div>
+
+
+        <h3>
+
+            Tickets
+
+        </h3>
+
+
+        <span>
+
+            {{ datos.tickets }}
+
+        </span>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card fade-in">
+
+
+        <div class="icon">
+
+            ⏳
+
+        </div>
+
+
+        <h3>
+
+            Pendientes
+
+        </h3>
+
+
+        <span>
+
+            {{ datos.pendientes }}
+
+        </span>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card fade-in">
+
+
+        <div class="icon">
+
+            👥
+
+        </div>
+
+
+        <h3>
+
+            Usuarios
+
+        </h3>
+
+
+        <span>
+
+            {{ datos.usuarios }}
+
+        </span>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card fade-in">
+
+
+        <div class="icon">
+
+            💎
+
+        </div>
+
+
+        <h3>
+
+            Robux Entregados
+
+        </h3>
+
+
+        <span>
+
+            {{ datos.robux }}
+
+        </span>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card fade-in">
+
+
+        <div class="icon">
+
+            🚨
+
+        </div>
+
+
+        <h3>
+
+            Blacklist
+
+        </h3>
+
+
+        <span>
+
+            {{ datos.blacklist if datos.blacklist else 0 }}
+
+        </span>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card online fade-in">
+
+
+        <div class="icon">
+
+            🟢
+
+        </div>
+
+
+        <h3>
+
+            Sistema
+
+        </h3>
+
+
+        <span>
+
+            Online
+
+        </span>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel-box">
+
+
+
+<h2>
+
+📊 Estadísticas en tiempo real
+
+</h2>
+
+
+
+
+
+<div class="charts-grid">
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+🎟️ Tickets creados
+
+</h3>
+
+
+<canvas id="ticketsChart"></canvas>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+💎 Robux entregados
+
+</h3>
+
+
+<canvas id="robuxChart"></canvas>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+👥 Usuarios registrados
+
+</h3>
+
+
+<canvas id="usersChart"></canvas>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="chart-card">
+
+
+<h3>
+
+🚨 Alertas antifraude
+
+</h3>
+
+
+<canvas id="riskChart"></canvas>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

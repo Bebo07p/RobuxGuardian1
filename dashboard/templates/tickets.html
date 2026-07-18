@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="page-header">
+
+
+    <h1>
+        🎫 Tickets Discord
+    </h1>
+
+
+    <p>
+        Historial y estado de los tickets creados en RobuxGuardian.
+    </p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="table-container">
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+ID
+</th>
+
+
+<th>
+Usuario
+</th>
+
+
+<th>
+Asunto
+</th>
+
+
+<th>
+Estado
+</th>
+
+
+<th>
+Reclamado por
+</th>
+
+
+<th>
+Cerrado por
+</th>
+
+
+<th>
+Fecha creación
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+
+<tbody>
+
+
+
+
+{% for ticket in tickets %}
+
+
+
+<tr>
+
+
+
+<td>
+
+#{{ ticket["id"] }}
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+{{ ticket["user"] }}
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+{{ ticket["subject"] }}
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+
+{% if ticket["status"] == "Cerrado" %}
+
+
+<span>
+
+🔒 Cerrado
+
+</span>
+
+
+{% elif ticket["status"] == "En revisión" %}
+
+
+<span>
+
+🟡 En revisión
+
+</span>
+
+
+{% else %}
+
+
+<span>
+
+🟢 Pendiente
+
+</span>
+
+
+{% endif %}
+
+
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+
+{{ ticket["claimed_by"] if ticket["claimed_by"] else "Sin asignar" }}
+
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+
+{{ ticket["closed_by"] if ticket["closed_by"] else "Abierto" }}
+
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+
+📅 {{ ticket["created_at"] if ticket["created_at"] else "Sin fecha" }}
+
+
+</td>
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+{% else %}
+
+
+
+
+
+<tr>
+
+
+<td colspan="7">
+
+
+No hay tickets registrados.
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+{% endfor %}
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

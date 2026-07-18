@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="page-header">
+
+
+    <h1>
+        💎 Entregas de Robux
+    </h1>
+
+
+    <p>
+        Historial completo de Robux entregados por el equipo.
+    </p>
+
+
+</div>
+
+
+
+
+
+
+<div class="table-container">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+ID
+</th>
+
+
+<th>
+Usuario Discord
+</th>
+
+
+<th>
+Usuario Roblox
+</th>
+
+
+<th>
+Cantidad
+</th>
+
+
+<th>
+Motivo
+</th>
+
+
+<th>
+Staff
+</th>
+
+
+<th>
+Fecha
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+
+<tbody>
+
+
+
+
+
+{% for entrega in entregas %}
+
+
+
+<tr>
+
+
+
+<td>
+
+{{ entrega["id"] }}
+
+</td>
+
+
+
+
+
+<td>
+
+{{ entrega["discord_username"] }}
+
+</td>
+
+
+
+
+
+<td>
+
+{{ entrega["roblox_username"] }}
+
+</td>
+
+
+
+
+
+<td>
+
+
+<span class="robux">
+
+💎 {{ entrega["amount"] }}
+
+</span>
+
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+{{ entrega["reason"] if entrega["reason"] else "Sin motivo" }}
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+🛡️ {{ entrega["delivered_by"] }}
+
+</td>
+
+
+
+
+
+
+
+<td>
+
+📅 {{ entrega["created_at"] }}
+
+</td>
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+{% else %}
+
+
+
+
+
+<tr>
+
+
+<td colspan="7">
+
+
+No hay entregas registradas.
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

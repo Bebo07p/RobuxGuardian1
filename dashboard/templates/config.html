@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+
+<div class="page-header">
+
+
+    <h1>
+
+        ⚙️ Configuración
+
+    </h1>
+
+
+    <p>
+
+        Ajustes generales de RobuxGuardian Enterprise.
+
+    </p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="settings-grid">
+
+
+
+
+
+
+<div class="panel-box">
+
+
+
+<h2>
+
+🤖 Sistema Discord
+
+</h2>
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Estado del Bot
+
+</span>
+
+
+
+<strong class="online">
+
+🟢 Online
+
+</strong>
+
+
+
+</div>
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Dashboard
+
+</span>
+
+
+<strong>
+
+Activo
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel-box">
+
+
+
+<h2>
+
+🛡️ Seguridad
+
+</h2>
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Protección de Login
+
+</span>
+
+
+<strong>
+
+Activo
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Sesión Administrador
+
+</span>
+
+
+<strong>
+
+7 días
+
+</strong>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel-box">
+
+
+
+<h2>
+
+👤 Información
+
+</h2>
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Administrador actual
+
+</span>
+
+
+<strong>
+
+{{ session.get("admin_name") }}
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Rol
+
+</span>
+
+
+<strong>
+
+{{ session.get("admin_role") }}
+
+</strong>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

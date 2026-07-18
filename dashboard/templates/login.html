@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        RobuxGuardian | Login
+    </title>
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+
+
+</head>
+
+
+<body>
+
+
+<div class="login-container fade-in">
+
+
+
+    <div class="login-card">
+
+
+        <div class="logo-login">
+
+
+            <div class="shield">
+
+                🛡️
+
+            </div>
+
+
+            <h1>
+
+                RobuxGuardian
+
+            </h1>
+
+
+            <p>
+
+                Enterprise Dashboard
+
+            </p>
+
+
+        </div>
+
+
+
+
+
+        {% if error %}
+
+
+        <div class="error-box">
+
+            {{ error }}
+
+        </div>
+
+
+        {% endif %}
+
+
+
+
+
+
+        <form method="POST">
+
+
+
+            <div class="input-group">
+
+
+                <label>
+
+                    Usuario
+
+                </label>
+
+
+                <input
+
+                type="text"
+
+                name="name"
+
+                placeholder="Nombre del administrador"
+
+                required
+
+                >
+
+
+            </div>
+
+
+
+
+
+
+            <div class="input-group">
+
+
+                <label>
+
+                    Contraseña
+
+                </label>
+
+
+                <input
+
+                type="password"
+
+                name="password"
+
+                placeholder="Contraseña"
+
+                required
+
+                >
+
+
+            </div>
+
+
+
+
+
+            <button type="submit">
+
+
+                Entrar al Panel
+
+
+            </button>
+
+
+
+
+        </form>
+
+
+
+
+        <footer>
+
+
+            🛡️ RobuxGuardian Security System
+
+
+        </footer>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+</body>
+
+
+</html>

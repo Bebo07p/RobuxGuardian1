@@ -1,0 +1,205 @@
+/* ==========================
+   SIDEBAR
+========================== */
+
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 260px;
+
+    height: 100vh;
+
+    background: #111827;
+
+    border-right: 1px solid #1f2937;
+
+    padding: 25px 15px;
+
+    z-index: 1000;
+
+}
+
+
+
+
+
+/* ==========================
+   LOGO
+========================== */
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.logo:first-letter {
+
+    font-size: 35px;
+
+}
+
+
+
+
+
+/* ==========================
+   MENU
+========================== */
+
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+
+
+
+.sidebar nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    color: #9ca3af;
+
+    border-radius: 12px;
+
+    transition: .3s;
+
+    font-size: 15px;
+
+}
+
+
+
+
+
+.sidebar nav a i {
+
+    font-size: 20px;
+
+}
+
+
+
+
+
+.sidebar nav a:hover {
+
+
+    background: #1e293b;
+
+
+    color: white;
+
+
+    transform: translateX(5px);
+
+
+}
+
+
+
+
+
+.sidebar nav a:hover i {
+
+
+    color: #3b82f6;
+
+
+}
+
+
+
+
+
+/* ==========================
+   ANIMACION ENTRADA
+========================== */
+
+
+.sidebar {
+
+    animation: slideSidebar .6s ease;
+
+}
+
+
+
+
+@keyframes slideSidebar {
+
+
+    from {
+
+        transform: translateX(-100%);
+
+        opacity: 0;
+
+    }
+
+
+
+    to {
+
+        transform: translateX(0);
+
+        opacity: 1;
+
+    }
+
+
+}
+
+
+.sidebar nav a.active {
+
+
+    background:#2563eb;
+
+
+    color:white;
+
+
+}
+
+
+.sidebar nav a.active i {
+
+
+    color:white;
+
+
+}

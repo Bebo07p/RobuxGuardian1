@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+<div class="page-header">
+
+
+    <h1>
+
+        🛡️ Sistema Antifraude
+
+    </h1>
+
+
+    <p>
+
+        Revisión de usuarios marcados por RobuxGuardian.
+
+    </p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="table-container">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+ID
+
+</th>
+
+
+<th>
+
+Usuario
+
+</th>
+
+
+<th>
+
+Razón
+
+</th>
+
+
+<th>
+
+Estado
+
+</th>
+
+
+<th>
+
+Fecha
+
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+<tbody>
+
+
+
+
+{% for usuario in blacklist %}
+
+
+
+<tr>
+
+
+
+<td>
+
+{{ usuario[0] }}
+
+</td>
+
+
+
+
+
+<td>
+
+{{ usuario[1] }}
+
+</td>
+
+
+
+
+
+<td>
+
+{{ usuario[2] }}
+
+</td>
+
+
+
+
+
+<td>
+
+
+
+<span class="status danger">
+
+Bloqueado
+
+</span>
+
+
+
+</td>
+
+
+
+
+
+<td>
+
+{{ usuario[-1] }}
+
+</td>
+
+
+
+
+
+</tr>
+
+
+
+{% else %}
+
+
+
+<tr>
+
+
+<td colspan="5">
+
+
+✅ No hay usuarios en blacklist.
+
+
+</td>
+
+
+</tr>
+
+
+
+{% endfor %}
+
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

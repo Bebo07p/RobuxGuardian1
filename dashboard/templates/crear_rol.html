@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<h1>
+👑 Crear Nuevo Rol
+</h1>
+
+
+<form method="POST">
+
+
+<label>
+Nombre del rol
+</label>
+
+
+<input 
+type="text"
+name="nombre"
+placeholder="Ej: Moderador"
+required
+>
+
+
+<br><br>
+
+
+<label>
+Permisos
+</label>
+
+
+<input 
+type="text"
+name="permisos"
+placeholder="tickets, usuarios, antifraude"
+>
+
+
+<br><br>
+
+
+<button type="submit">
+Crear Rol
+</button>
+
+
+</form>
+
+
+{% endblock %}

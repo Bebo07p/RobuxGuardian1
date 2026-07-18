@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+
+<div class="page-header">
+
+
+<h1>
+
+👤 Perfil Administrador
+
+</h1>
+
+
+<p>
+
+Información de la cuenta actual.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel-box">
+
+
+
+<h2>
+
+🛡️ Datos del administrador
+
+</h2>
+
+
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Usuario
+
+</span>
+
+
+<strong>
+
+{{ session["admin"]["name"] if session.get("admin") else "Sin sesión" }}
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Rol
+
+</span>
+
+
+<strong>
+
+{{ session["admin"]["role"] if session.get("admin") else "Sin rol" }}
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+ID Administrador
+
+</span>
+
+
+<strong>
+
+{{ session["admin"]["id"] if session.get("admin") else "N/A" }}
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="setting-item">
+
+
+<span>
+
+Estado
+
+</span>
+
+
+<strong class="online">
+
+🟢 Activo
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

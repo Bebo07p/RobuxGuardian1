@@ -1,0 +1,456 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+}
+
+
+
+body {
+
+    background: #0b0f19;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+
+
+/* ==========================
+   ESTRUCTURA PRINCIPAL
+========================== */
+
+
+.layout {
+
+    display: flex;
+
+    min-height: 100vh;
+
+}
+
+
+
+
+
+.content {
+
+    flex: 1;
+
+    margin-left: 260px;
+
+}
+
+
+
+
+
+.page {
+
+    padding: 30px;
+
+}
+
+
+
+
+
+/* ==========================
+   NAVBAR
+========================== */
+
+
+.navbar {
+
+    height: 80px;
+
+    background: #111827;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    border-bottom: 1px solid #1f2937;
+
+}
+
+
+
+.navbar h2 {
+
+    font-size: 22px;
+
+}
+
+
+
+
+
+.profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+
+.profile small {
+
+    color: #9ca3af;
+
+}
+
+
+
+.profile a {
+
+    background: #ef4444;
+
+    padding: 8px 15px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* ==========================
+   TITULOS
+========================== */
+
+
+.page-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.page-header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.page-header p {
+
+    color: #9ca3af;
+
+}
+
+
+
+
+
+/* ==========================
+   PANELES
+========================== */
+
+
+.panel-box {
+
+    background: #111827;
+
+    border: 1px solid #1f2937;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.panel-box h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* ==========================
+   INPUTS
+========================== */
+
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.input-group label {
+
+    color: #9ca3af;
+
+}
+
+
+
+input,
+select {
+
+
+    background: #0f172a;
+
+    color: white;
+
+    border: 1px solid #334155;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    outline: none;
+
+}
+
+
+
+input:focus,
+select:focus {
+
+
+    border-color: #3b82f6;
+
+}
+
+
+
+
+
+button {
+
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+
+button:hover {
+
+
+    transform: translateY(-2px);
+
+    opacity: .9;
+
+}
+
+
+
+
+button.danger {
+
+
+    background: #dc2626;
+
+}
+
+
+
+
+
+
+/* ==========================
+   STATUS
+========================== */
+
+
+.status {
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+}
+
+
+
+.status.open {
+
+
+    background: #065f46;
+
+}
+
+
+
+.status.closed {
+
+
+    background: #374151;
+
+}
+
+
+
+.status.danger {
+
+
+    background: #991b1b;
+
+}
+
+
+
+.online {
+
+
+    color: #22c55e;
+
+}
+
+/* ==========================
+   NOTIFICACIONES
+========================== */
+
+
+#notifications {
+
+
+    position:fixed;
+
+
+    top:20px;
+
+
+    right:20px;
+
+
+    z-index:9999;
+
+
+}
+
+
+
+
+.notification {
+
+
+    background:#111827;
+
+
+    border:1px solid #334155;
+
+
+    padding:15px;
+
+
+    border-radius:12px;
+
+
+    width:300px;
+
+
+    margin-bottom:10px;
+
+
+    animation:fadeIn .4s ease;
+
+
+}
+
+
+
+
+.notification.success {
+
+
+    border-left:5px solid #22c55e;
+
+
+}
+
+
+
+
+.notification.info {
+
+
+    border-left:5px solid #3b82f6;
+
+
+}
+
+
+
+
+.notification.error {
+
+
+    border-left:5px solid #ef4444;
+
+
+}
+
+.card,
+.panel-box,
+.table-container {
+
+    transition: .4s;
+
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        RobuxGuardian Dashboard
+    </title>
+
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+<div class="layout">
+
+
+
+
+
+<!-- ==========================
+     SIDEBAR
+========================== -->
+
+
+<aside class="sidebar">
+
+
+
+    <div class="logo">
+
+
+        🛡️ RobuxGuardian
+
+
+    </div>
+
+
+
+
+
+    <nav>
+
+
+
+        <a href="/">
+
+            🏠 Dashboard
+
+        </a>
+
+
+
+
+        <a href="/tickets">
+
+            🎟️ Tickets
+
+        </a>
+
+
+
+
+        <a href="/entregas">
+
+            💎 Entregas
+
+        </a>
+
+
+
+
+        <a href="/usuarios">
+
+            👥 Usuarios
+
+        </a>
+
+
+
+
+        <a href="/antifraude">
+
+            🛡️ Antifraude
+
+        </a>
+
+
+
+
+        <a href="/admins">
+
+            👑 Administradores
+
+        </a>
+
+
+
+
+        <a href="/config">
+
+            ⚙️ Configuración
+
+        </a>
+
+
+
+
+<a href="{{ url_for('users.perfil', discord_id=session['discord_id']) }}">
+    👤 Perfil
+</a>
+
+
+    </nav>
+
+
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ==========================
+     CONTENIDO
+========================== -->
+
+
+<div class="content">
+
+
+
+
+
+<header class="navbar">
+
+
+
+<h2>
+
+RobuxGuardian Panel
+
+</h2>
+
+
+
+
+
+<div class="profile">
+
+
+
+<span id="system-clock"></span>
+
+
+
+
+<div>
+
+
+<strong>
+
+{{ session.get("admin_name") }}
+
+</strong>
+
+
+
+<br>
+
+
+<small>
+
+{{ session.get("admin_role") }}
+
+</small>
+
+
+</div>
+
+
+
+
+
+<a href="/logout">
+
+Salir
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+</header>
+
+
+
+
+
+
+
+
+<main class="page fade-in">
+
+
+{% block content %}
+
+{% endblock %}
+
+
+</main>
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- JS -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='js/notifications.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='js/tables.js') }}"></script>
+
+
+
+
+</body>
+
+
+</html>
